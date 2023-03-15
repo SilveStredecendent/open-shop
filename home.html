@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+    <title> Shop </title>
+
+    <style>
+        /*Card*/
+
+        .card {
+            width: 190px;
+            height: 254px;
+            border-radius: 20px;
+            background: #f5f5f5;
+            position: relative;
+            padding: 1.8rem;
+            border: 2px solid #c3c6ce;
+            transition: 0.5s ease-out;
+            overflow: visible;
+        }
+
+        .card-details {
+            color: black;
+            height: 100%;
+            gap: .5em;
+            display: grid;
+            place-content: center;
+        }
+
+        .card-button {
+            transform: translate(-50%, 125%);
+            width: 60%;
+            border-radius: 1rem;
+            border: none;
+            background-color: #008bf8;
+            color: #fff;
+            font-size: 1rem;
+            padding: .5rem 1rem;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            opacity: 0;
+            transition: 0.3s ease-out;
+        }
+
+        .text-body {
+            color: rgb(134, 134, 134);
+        }
+
+        .text-title {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .card:hover {
+            border-color: #008bf8;
+            box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+        }
+
+        .card:hover .card-button {
+            transform: translate(-50%, 50%);
+            opacity: 1;
+        }
+
+        /*Card*/
+    </style>
+
+</head>
+
+<body style="background-image: linear-gradient(to right top, #9b00ff, #ff009a, #ff382d, #ffb500, #b0ff00);">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                data-mdb-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+                <a class="navbar-brand" href="#">Hidden brand</a>
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                </ul>
+
+                <form class="d-flex input-group w-auto">
+
+                    <input type="search" class="form-control" placeholder="Type query" aria-label="Search" />
+
+                    <button class="btn btn-outline-primary" type="button" data-mdb-ripple-color="dark"> Search </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div id="carouselExampleCaptions" class="carousel slide">
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="..." class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+
+    <div class="container text-center">
+
+        <div class="row align-items-center">
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-details">
+                        <p class="text-title">Card title</p>
+                        <p class="text-body">Here are the details of the card</p>
+                    </div>
+                    <button class="card-button">More info</button>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-details">
+                        <p class="text-title">Card title</p>
+                        <p class="text-body">Here are the details of the card</p>
+                    </div>
+                    <button class="card-button">More info</button>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-details">
+                        <p class="text-title">Card title</p>
+                        <p class="text-body">Here are the details of the card</p>
+                    </div>
+                    <button class="card-button">More info</button>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-details">
+                        <p class="text-title">Card title</p>
+                        <p class="text-body">Here are the details of the card</p>
+                    </div>
+                    <button class="card-button">More info</button>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-details">
+                        <p class="text-title">Card title</p>
+                        <p class="text-body">Here are the details of the card</p>
+                    </div>
+                    <button class="card-button">More info</button>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-details">
+                        <p class="text-title">Card title</p>
+                        <p class="text-body">Here are the details of the card</p>
+                    </div>
+                    <button class="card-button">More info</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="bg-light text-center text-white">
+
+        <div class="container p-4 pb-0">
+
+            <section class="mb-4">
+
+                <a class="btn text-white btn-floating m-1" style="background-color: #3b5998;" href="#!" role="button"><i
+                        class="fab fa-facebook-f"></i></a>
+
+                <a class="btn text-white btn-floating m-1" style="background-color: #55acee;" href="#!" role="button"><i
+                        class="fab fa-twitter"></i></a>
+
+                <a class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="#!" role="button"><i
+                        class="fab fa-google"></i></a>
+
+                <a class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" href="#!" role="button"><i
+                        class="fab fa-instagram"></i></a>
+
+                <a class="btn text-white btn-floating m-1" style="background-color: #0082ca;" href="#!" role="button"><i
+                        class="fab fa-linkedin-in"></i></a>
+
+                <a class="btn text-white btn-floating m-1" style="background-color: #333333;" href="#!" role="button"><i
+                        class="fab fa-github"></i></a>
+            </section>
+
+        </div>
+
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
